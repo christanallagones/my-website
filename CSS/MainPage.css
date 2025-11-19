@@ -6,7 +6,7 @@ body {
 }
 
 /* Type selector */
-ul {
+ul li{
     display: inline-table;
     margin: 0 auto;
     padding-inline: 3em; /* changed px → relative */
