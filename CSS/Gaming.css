@@ -13,6 +13,11 @@ h1 { /* Margin and Padding */
     color: grey;
     font-size: 3em;
 }
+ul li {
+    margin-bottom: 0.8em;
+    background-color: #1f4cdd;
+    border: 0.3em solid #000000;
+}
 p {
 
 }
