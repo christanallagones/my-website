@@ -2,16 +2,19 @@ body {
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif, monospace;   /* font property #1 */
     font-size: 1.6em;                /* font property #2 */
-    background-color: #00eeff;        /* color */
+    background-image: url("../Pictures/Background.png");   
+    background-size: cover;      /* makes it fill the whole screen */
+    background-position: center; /* centers the image */
+    background-repeat: no-repeat; /* prevents repeating */
 }
 
 /* Margin and Padding */
 ul {
     display: inline-table;
     padding-inline: 3em; /* changed px → relative */
-    border: 4em dashed #2600ff
-    margin-top: 5rem;
-    padding-left: 10rem;
+    border: 4em solid #000000;
+    margin-top: 5em;
+    padding-left: 0, 0, 1;
 }
 
 /* Padding */
@@ -24,28 +27,78 @@ ul {
 /* Margin */
 ul li {
     margin-bottom: 0.8em;
-    background-color: #00ff37;
+    background-color: #4b68c4;
     border: 0.3em solid #000000;
 }
 
-img { /* Margin and border */
-    width: 25%;
-    height: 25%;
-    object-fit: cover;
-    border: 3em solid #000000;
-    border-radius: 25%;
-    padding: 2em;
-    margin-right: 50%;
+#pfp { 
+    float: left;
+    margin-bottom: 2em;
+    width: 100%;
+    max-width: 431px;
+    border: 0.3em solid #000000;
 }
 h1 { /* Margin and Padding */
-    margin-left: 50%;
     padding-top: 2rem;
-    background-color: #00ff37;
+    background-color: #4b68c4;
     border: 0.3em solid #000000;
 }
+main p { /*Styling will applies to all <p> tags in the <main> tag*/
+    padding: 1em;
+    margin: 1 15% 2em 15%;
+    overflow: hidden;
+    font-size: large;
+}
+.paragraph { /*Class selector, given to <p> tags for stylings*/
+    /*Class selector, will applie to all tags that are given this class, class given to <p> tags*/
+    text-align: left;
+    font-size: 1em;
+    line-height: 2.5em;
+    /*The border and color that will go around elements given this class*/
+    background-color: var(--text_background_color);
+    border-radius: 1em;
+    border: .25em solid var(--border_color);
+}
+#introduction {/* Margin and Padding */
+    margin-left: 30%;
+    padding-left: 3rem;
+    background-color: #4b68c4;
+    border: 0.3em solid #000000;
+}
+#nav_menu {
+    margin: auto;
+    width: 100%;
+}
 
-p#introduction {/* Margin and Padding */
-    margin-left: 50%;
+#nav_menu ul {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-around; 
+    list-style-type: none;
+    position: relative;
+}
+
+
+#nav_menu ul li {
+    flex-basis: 33.33%;          
+}
+
+
+#nav_menu ul li a {
+    display: block;
+    padding: 1em 0;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    color: #000000;
+    border-right: 2px solid var(--border_color);
+}
+
+
+#nav_menu ul li:last-child a {
+    border-right: none;
+}
+
     padding-left: 3rem;
     background-color: #00ff37;
     border: 0.3em solid #000000;
