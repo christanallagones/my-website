@@ -4,10 +4,15 @@ body {
     font-size: 1.6em;                /* font property #2 */
     background-color: #ffa600;        /* color */
 }
+ul li {
+    margin-bottom: 0.8em;
+    background-color: #ffffff;
+    border: 0.3em solid #000000;
+}
 .column {
     float: left;
     width: 32%;
-    border: 0.5em solid pink;  /* chaotic border */
+    border: 0.5em solid rgb(124, 124, 124);  /* chaotic border */
     height: 15em;            /* fixed height for chaos */
     overflow: auto;
 }
