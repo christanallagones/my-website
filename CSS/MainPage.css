@@ -1,106 +1,144 @@
+/* Base page styles and typography for the homepage */
+:root {
+    /* Nav variables for easy tweaks */
+    --nav-height: 60px;
+    --nav-bg: #ffffff;
+    --nav-border-color: #000000;
+    --border_color: #000000;
+    --text_background_color: #e6eefc;
+}
+
 body {
     text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif, monospace;   /* font property #1 */
-    font-size: 1.6em;                /* font property #2 */
-    background-image: url("../Pictures/Background.png");   
-    background-size: cover;      /* makes it fill the whole screen */
-    background-position: center; /* centers the image */
-    background-repeat: no-repeat; /* prevents repeating */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif, monospace;   /* font stack: primary first, fallbacks afterwards */
+    font-size: 1.6em;                /* base font size for the page (relative to the browser default) */
+    background-image: url("../Pictures/Background.png");   /* background image placed in the Pictures directory */
+    background-size: cover;      /* scale the background to cover the entire viewport */
+    background-position: center; /* keep the background centered */
+    background-repeat: no-repeat; /* do not tile the background image */
 }
 
-/* Margin and Padding */
+/* Navigation bar: fixed to the top and full-width so it stays visible while scrolling */
+#nav_menu {
+    position: fixed;               /* pin the nav to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;                   /* span the full width of the viewport */
+    height: var(--nav-height);     /* use the CSS variable so it’s easy to change */
+    background: var(--nav-bg);     /* solid background to prevent content from showing through */
+    border-bottom: 2px solid var(--nav-border-color); /* subtle divider under the nav */
+    z-index: 1000;                 /* keep the nav on top of other content */
+    display: flex;                 /* easier layout for children */
+    align-items: center;           /* vertically center nav content */
+    box-sizing: border-box;        /* include padding/border in width calculations */
+    padding: 0 1rem;               /* horizontal padding inside the nav */
+}
+
+/* Nav list reset and layout */
+#nav_menu ul {
+    margin: 0;                     /* remove default ul margins so it fits the bar */
+    padding: 0;                    /* remove default ul padding */
+    display: flex;                 /* horizontal layout for nav items */
+    width: 100%;
+    justify-content: space-around; /* evenly space the items */
+    list-style: none;              /* remove bullets */
+    height: 100%;                  /* make the list fill nav vertically */
+    align-items: center;           /* vertically center links */
+}
+
+#nav_menu ul li {
+    flex-basis: 33.33%; /* distribute items roughly evenly; adjust as needed */
+}
+
+#nav_menu ul li a {
+    display: block;                /* make the entire area clickable */
+    height: 100%;                  /* fill the nav bar height for a larger tap target */
+    line-height: var(--nav-height);/* vertically center text if no extra padding is used */
+    padding: 0 0.5rem;             /* horizontal breathing room */
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    color: #000000;
+    border-right: 2px solid var(--border_color); /* divider between nav items */
+    box-sizing: border-box;
+}
+
+#nav_menu ul li:last-child a {
+    border-right: none; /* remove trailing divider */
+}
+
+/* Ensure page content does not sit underneath the fixed nav */
+main, body > main {
+    padding-top: calc(var(--nav-height) + 1rem); /* push content down so it’s visible */
+}
+
+/* Unordered list styling used for the hobbies list */
 ul {
     display: inline-table;
-    padding-inline: 3em; /* changed px → relative */
-    border: 4em solid #000000;
-    margin-top: 5em;
-    padding-left: 0, 0, 1;
+    padding-inline: 3em; /* logical horizontal padding */
+    border: 4em solid #000000; /* thick solid border around the list */
+    margin-top: 5em; /* space above the list */
+    padding-left: 1rem; /* corrected value; removed invalid comma-separated value */
 }
 
-/* Padding */
+/* Small inline element used as a label or heading near the list */
 #myhobbiesandinterests {
-    display: inline;
-    padding-right: 5em;
-    padding-left: 1.5em;
+    display: inline;        /* keeps it in the flow next to inline-table ul */
+    padding-right: 5em;     /* space to the right */
+    padding-left: 1.5em;    /* space to the left */
 }
 
-/* Margin */
+/* Each list item styling */
 ul li {
     margin-bottom: 0.8em;
     background-color: #4b68c4;
     border: 0.3em solid #000000;
 }
 
+/* Profile picture styling */
 #pfp { 
     float: left;
     margin-bottom: 2em;
-    width: 100%;
-    max-width: 431px;
+    width: 100%;           /* uses container-relative sizing */
+    max-width: 431px;      /* prevents the image from becoming too large on wide screens */
     border: 0.3em solid #000000;
 }
-h1 { /* Margin and Padding */
+
+/* Page heading */
+h1 {
     padding-top: 2rem;
     background-color: #4b68c4;
     border: 0.3em solid #000000;
 }
-main p { /*Styling will applies to all <p> tags in the <main> tag*/
+
+/* Paragraphs inside <main> */
+main p {
     padding: 1em;
-    margin: 1 15% 2em 15%;
+    margin: 1em 15% 2em 15%; /* fixed: added units to make this valid */
     overflow: hidden;
     font-size: large;
 }
-.paragraph { /*Class selector, given to <p> tags for stylings*/
-    /*Class selector, will applie to all tags that are given this class, class given to <p> tags*/
+
+/* Generic paragraph utility class */
+.paragraph {
     text-align: left;
     font-size: 1em;
     line-height: 2.5em;
-    /*The border and color that will go around elements given this class*/
     background-color: var(--text_background_color);
     border-radius: 1em;
     border: .25em solid var(--border_color);
 }
-#introduction {/* Margin and Padding */
-    margin-left: 30%;
+
+/* #introduction box */
+#introduction {
+    margin-left: 30%;   /* pushes the introduction inward — may be large on small screens */
     padding-left: 3rem;
     background-color: #4b68c4;
     border: 0.3em solid #000000;
 }
-#nav_menu {
-    margin: auto;
-    width: 100%;
-}
 
-#nav_menu ul {
-    display: flex;
-    flex-basis: 100%;
-    justify-content: space-around; 
-    list-style-type: none;
-    position: relative;
-}
-
-
-#nav_menu ul li {
-    flex-basis: 33.33%;          
-}
-
-
-#nav_menu ul li a {
-    display: block;
-    padding: 1em 0;
-    text-decoration: none;
-    font-weight: bold;
-    text-align: center;
-    color: #000000;
-    border-right: 2px solid var(--border_color);
-}
-
-
-#nav_menu ul li:last-child a {
-    border-right: none;
-}
-
-    padding-left: 3rem;
-    background-color: #00ff37;
-    border: 0.3em solid #000000;
-}
-    
+/* Notes:
+   - Fixed nav uses --nav-height. If you change that value, main padding-top will adjust automatically.
+   - I corrected invalid CSS values (removed the comma-separated padding-left and added units to margin).
+   - Consider adding responsive media queries to adjust nav layout and #introduction margins for small screens.
+*/
