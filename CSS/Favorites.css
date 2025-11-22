@@ -2,7 +2,7 @@ body {
     text-align: center;
     font-family: Copperplate, fantasy;   /* font property #1 */
     font-size: 1.6em;                /* font property #2 */
-    background-image: url("");   
+    background-image: url("../Pictures/Blue.png");   
     background-size: cover;      /* makes it fill the whole screen */
     background-position: center; /* centers the image */
     background-repeat: repeat; /* prevents repeating */
@@ -13,12 +13,19 @@ h1 { /* Margin and Padding */
     color: grey;
     font-size: 3em;
 }
+ul li {
+    margin-bottom: 0.8em;
+    background-color: #3ca3c2;
+    border: 0.3em solid #000000;
+}
 p {
 
 }
 #nav_menu {
     margin: auto;
     width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 #nav_menu ul {
@@ -42,7 +49,7 @@ p {
     font-weight: bold;
     text-align: center;
     color: #000000;
-    border-right: 2px solid var(--border_color);
+    border: 0.3em solid #000000;
 }
 
 
