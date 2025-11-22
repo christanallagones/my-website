@@ -1,0 +1,31 @@
+ <!DOCTYPE html>
+ <!-- Homepage -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Gaming.css">
+    <meta name="description" content="My Gaming Career">
+    <title>Gaming</title><!--title of webpage, shows in browser tab-->
+  </head>
+  <nav id="nav_menu">
+        <ul>
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="Sports.html">Sports</a></li>
+            <li><a href="Gaming.html">Gaming</a></li>
+            <li><a href="Favorites.html">Favorites</a></li>
+        </ul>
+      </nav>
+    <header>
+      <h1>Game On!</h1>
+    </header>
+  <body>
+    <main>
+      <p>
+        
+      </p>
+    
+    </main>
+    <footer>&copy; Copyright Christan Allagones 2025</footer>
+  </body>
+</html>
