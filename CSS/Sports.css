@@ -31,3 +31,36 @@ h1 { /* Margin and Padding */
     font-size: 3em;
 }
 
+#nav_menu {
+    margin: auto;
+    width: 100%;
+}
+
+#nav_menu ul {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-around; 
+    list-style-type: none;
+    position: relative;
+}
+
+
+#nav_menu ul li {
+    flex-basis: 33.33%;          
+}
+
+
+#nav_menu ul li a {
+    display: block;
+    padding: 1em 0;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    color: #000000;
+    border-right: 2px solid var(--border_color);
+}
+
+
+#nav_menu ul li:last-child a {
+    border-right: none;
+}
