@@ -1,0 +1,51 @@
+body {
+    text-align: center;
+    font-family: Copperplate, fantasy;   /* font property #1 */
+    font-size: 1.6em;                /* font property #2 */
+    background-image: url("");   
+    background-size: cover;      /* makes it fill the whole screen */
+    background-position: center; /* centers the image */
+    background-repeat: repeat; /* prevents repeating */
+}
+h1 { /* Margin and Padding */
+    background-color: #000000;
+    border: 0.3em solid #246bd6;
+    color: grey;
+    font-size: 3em;
+}
+p {
+
+}
+#nav_menu {
+    margin: auto;
+    width: 100%;
+}
+
+#nav_menu ul {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-around; 
+    list-style-type: none;
+    position: relative;
+}
+
+
+#nav_menu ul li {
+    flex-basis: 33.33%;          
+}
+
+
+#nav_menu ul li a {
+    display: block;
+    padding: 1em 0;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    color: #000000;
+    border-right: 2px solid var(--border_color);
+}
+
+
+#nav_menu ul li:last-child a {
+    border-right: none;
+}
