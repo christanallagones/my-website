@@ -1,56 +1,82 @@
 body {
     text-align: center;
-    font-family: Copperplate, fantasy;   /* font property #1 */
     font-size: 1.6em;                /* font property #2 */
     background-image: url("../Pictures/Games.png");   
     background-size: cover;      /* makes it fill the whole screen */
     background-position: center; /* centers the image */
     background-repeat: repeat; /* prevents repeating */
 }
-h1 { /* Margin and Padding */
-    background-color: #000000;
-    border: 0.3em solid #246bd6;
-    color: grey;
+h1, h2, h3, h4 { /* Margin and Padding */
+    background-color: #1f4cdd;
+    border: solid #000000;
+    color: #000000;
     font-size: 3em;
+    width: 50%;
+    max-width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 1em;
 }
-ul li {
+nav ul li {
     margin-bottom: 0.8em;
     background-color: #1f4cdd;
     border: 0.3em solid #000000;
 }
-p {
-
+main p { /*Styling will applies to all <p> tags in the <main> tag*/
+    padding: 1em;
+    margin: 1em 15% 2em 15%;
+    overflow: hidden;
+    font-size: large;
 }
-#nav_menu {
-    margin: auto;
-    width: 100%;
-}
-
-#nav_menu ul {
-    display: flex;
-    flex-basis: 100%;
-    justify-content: space-around; 
-    list-style-type: none;
-    position: relative;
-}
-
-
-#nav_menu ul li {
-    flex-basis: 33.33%;          
-}
-
-
-#nav_menu ul li a {
-    display: block;
-    padding: 1em 0;
-    text-decoration: none;
-    font-weight: bold;
+.paragraph { /*Class selector, given to <p> tags for stylings*/
+    /*Class selector, will applie to all tags that are given this class, class given to <p> tags*/
     text-align: center;
-    color: #000000;
-    border-right: 2px solid var(--border_color);
+    font-size: 1em;
+    line-height: 2.5em;
+    /*The border and color that will go around elements given this class*/
+    background-color: #27dfcf;
+    border-radius: 1em;
+    border: .25em solid #000000;
+    max-width: 75%;
+    margin: 0 auto;
+    margin-top: 1em;
+
+}
+section ul {
+    background-color: #27dfcf;
+    border-radius: 1em;
+    border: .25em solid #000000;
+    max-width: 75%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 1em;
+}
+.gallery { /*Makes the gallery of images display in a flex box*/
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap; /*Makes the flexboxes wrap (move down in rows) as the page size decreases*/
+    row-gap: 3em;
+    column-gap: 1.5em;
+    padding: 1em;
+    justify-content: center; /*Centers the content onto the page*/
+    
+}
+img { /*Set img width*/
+    width: 100%;
+    max-width: 325px;
+    height: auto;
+    border: 1px solid #000000;
+}
+@media (max-width: 768px) {
+    h1, h2, h3, h4 {
+        font-size: 2em;
+        width: 80%;
+    }
 }
 
-
-#nav_menu ul li:last-child a {
-    border-right: none;
+@media (max-width: 480px) {
+    h1, h2, h3, h4 {
+        font-size: 1.5em;
+        width: 90%;
+    }
 }
