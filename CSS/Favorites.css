@@ -1,11 +1,11 @@
 body {
     text-align: center;
-    font-family: Copperplate, fantasy;   /* font property #1 */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif, monospace;;   /* font property #1 */
     font-size: 1.6em;                /* font property #2 */
     background-image: url("../Pictures/Blue.png");   
     background-size: cover;      /* makes it fill the whole screen */
     background-position: center; /* centers the image */
-    background-repeat: repeat; /* prevents repeating */
+    background-repeat: repeat; 
 }
 h1 { /* Margin and Padding */
     background-color: #000000;
@@ -18,41 +18,44 @@ ul li {
     background-color: #3ca3c2;
     border: 0.3em solid #000000;
 }
-p {
-
+main p { /*Styling will applies to all <p> tags in the <main> tag*/
+    padding: 1em;
+    margin: 1em 15% 2em 15%;
+    overflow: hidden;
+    font-size: large;
 }
-#nav_menu {
-    margin: auto;
-    width: 100%;
-    display: flex;
-    align-items: center;
+.paragraph { /*Class selector, given to <p> tags for stylings*/
+    /*Class selector, will applie to all tags that are given this class, class given to <p> tags*/
+    text-align: left;
+    font-size: 1em;
+    line-height: 2.5em;
+    /*The border and color that will go around elements given this class*/
+    background-color: #89d5e2;
+    border-radius: 1em;
+    border: 0.5em solid #000000;
 }
-
-#nav_menu ul {
-    display: flex;
-    flex-basis: 100%;
-    justify-content: space-around; 
-    list-style-type: none;
-    position: relative;
-}
-
-
-#nav_menu ul li {
-    flex-basis: 33.33%;          
-}
-
-
-#nav_menu ul li a {
-    display: block;
-    padding: 1em 0;
-    text-decoration: none;
-    font-weight: bold;
-    text-align: center;
-    color: #000000;
-    border: 0.3em solid #000000;
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+    main p {
+        margin: 1em 5% 2em 5%;
+    }
+    ul li {
+        font-size: 0.9em;
+    }
 }
 
-
-#nav_menu ul li:last-child a {
-    border-right: none;
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    main p {
+        margin: 1em 2% 2em 2%;
+        font-size: 0.9em;
+    }
+    ul li {
+        font-size: 0.8em;
+    }
 }
+
