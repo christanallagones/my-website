@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+}
+#nav_menu {
+    position: relative;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+}
+
+#nav_menu ul {
+    display: flex; /*Makes the navmenu act as a flexbox, below are the stylings for the flexbox*/
+    flex: 100%; /*Makes the flexbox take up the whole width of the page*/
+    justify-content: space-around; /*Allocates space evenly between flex items with half-size spaces before the first item and after the last item*/
+    list-style-type: none;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+#nav_menu ul li {
+    flex-basis: 25%; /*Makes the contents of the flexbox take up 25% of the set parent that the flexbox was declared in*/
+}
+
+#nav_menu ul ul { 
+    display: none; /* Don't display submenus until hover of li */
+    position: fixed; /*Makes the nested ul take position aboslutely where it is declared in space below the item it is nested in*/
+}
+
+#nav_menu ul ul li {  /* Display submenus vertically Subpages: Herpetoculture (ONLY visible on mobile), Gallery page*/ 
+    float: none; 
+} 
+
+#nav_menu ul li:hover > ul { /* Select ul child of li element */
+    display: block; /* Display submenu on hover of li element */
+    width: 25%; /*MUST BE THE SAME AS THE FLEX-BASIS on nav_menu ul li */
+}
+
+#nav_menu > ul::after { 
+    content: ""; /* Add empty content to the end of the first ul */
+    display: block; /* Display that content as a block element */
+    clear: both; /* Stop the floating of the li elements */
+}
+
+#nav_menu ul li a {
+    text-align: center;
+    display: block;
+    padding: 1em 0;
+    text-decoration: none;
+    background-color: var(--text_background_color);
+    color: var(--nav_text_color);
+    font-weight: bold;
+    border-right: 2px solid var(--border_color);
+}
+
+/* HOW TO MAKE THE MENUS FLOAT ON HOVER */
+#nav_menu ul li a:hover {
+    background-color: var(--nav_hover_color);
+}
+
+#nav_menu ul li a.lastitem { /*Takes the border off the right of the last navmenu item*/
+    border-right: none;
+}
+
+#nav_menu ul li a.current { /*Makes the menu button for the page that is being displayed change color to indicate user is viewing that page*/
+    background-color: var(--nav_hover_color);
+}
+
+#mobile_menu { /*Mobile menu not visible, done on purpose, only visible when display is changed in a media query*/
+    display: none;
+}
+
+#dontshow { /*Makes the submenu button for Sports page not show, Visible via media query*/
+    display: none;
+}
+
+/* Mobile screens - 768px wide or smaller */
+@media (max-width: 768px) {
+    #nav_menu ul {
+        flex-direction: column; /* stack menu items vertically */
+        align-items: center;
+    }
+
+    #nav_menu ul li {
+        flex-basis: 100%; /* full width for each menu item */
+    }
+
+    #nav_menu ul li a {
+        padding: 1em;
+        border-right: none; /* remove right border for vertical layout */
+        border-bottom: 1px solid #000; /* optional */
+    }
+
+    #nav_menu ul ul {
+        position: relative; /* dropdowns push content down instead of overlay */
+        top: 0;
+        left: 0;
+        width: 100%; 
+    }
+
+    #nav_menu ul li:hover > ul {
+        display: block;
+    }
+}
