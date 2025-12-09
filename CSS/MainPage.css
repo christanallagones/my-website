@@ -9,10 +9,8 @@ body {
 }
 
 /* Margin and Padding */
-ul {
+body ul {
     display: inline-table;
-    padding-inline: 3em; /* changed px → relative */
-    padding-left: 0, 0, 1;
 }
 
 /* Padding */
@@ -23,32 +21,32 @@ ul {
 }
 
 /* Margin */
-ul li {
+nav ul li {
     margin-bottom: 0.8em;
     background-color: #4b68c4;
     border: 0.3em solid #000000;
 }
 
-#pfp { 
+.meandpets { 
     float: left;
     margin-bottom: 2em;
     width: 100%;
     max-width: 431px;
     border: 0.3em solid #000000;
 }
-h1 { /* Margin and Padding */
-    padding-top: 2rem;
+h1, h2, h3{ /* Margin and Padding */
     background-color: #4b68c4;
     border: 0.3em solid #000000;
+    font-size: 2em;
 }
 main p { /*Styling will applies to all <p> tags in the <main> tag*/
     padding: 1em;
-    margin: 1 15% 2em 15%;
+    margin: 1em 15% 2em 15%;
     overflow: hidden;
     font-size: large;
 }
 .paragraph { /*Class selector, given to <p> tags for stylings*/
-    /*Class selector, will applie to all tags that are given this class, class given to <p> tags*/
+    /*Class selector, will apply to all tags that are given this class, class given to <p> tags*/
     text-align: left;
     font-size: 1em;
     line-height: 2.5em;
@@ -56,47 +54,44 @@ main p { /*Styling will applies to all <p> tags in the <main> tag*/
     background-color: var(--text_background_color);
     border-radius: 1em;
     border: .25em solid var(--border_color);
-}
-#introduction {/* Margin and Padding */
-    margin-left: 30%;
-    padding-left: 3rem;
+    margin: 0 auto;
     background-color: #4b68c4;
     border: 0.3em solid #000000;
 }
-#nav_menu {
-    margin: auto;
-    width: 100%;
-    display: flex;
-    z-index: 1000;
-    align-items: center;
-    padding: 0 1em;
+section ul {
+    background-color: #4b68c4;
+    border: 0.3em solid #000000;
+}
+/* Tablets */
+@media (max-width: 768px) {
+    .meandpets {
+        max-width: 90%;  /* almost full width */
+    }
+
+    main p {
+        margin: 1em 5% 2em 5%; /* reduce side margins */
+    }
+
+    nav ul li {
+        font-size: 0.9em;
+        padding: 0.5em 0;
+    }
 }
 
-#nav_menu ul {
-    display: flex;
-    flex-basis: 100%;
-    justify-content: space-around; 
-    list-style-type: none;
-    position: relative;
-}
+/* Phones */
+@media (max-width: 480px) {
+    .meandpets {
+        max-width: 100%;
+    }
 
+    main p {
+        margin: 1em 2% 2em 2%;
+        font-size: 0.9em;
+    }
 
-#nav_menu ul li {
-    flex-basis: 33.33%;          
-}
-
-
-#nav_menu ul li a {
-    display: block;
-    padding: 1em 0;
-    text-decoration: none;
-    font-weight: bold;
-    text-align: center;
-    color: #000000;
-    border-right: 2px solid #000000;
-}
-
-
-#nav_menu ul li:last-child a {
-    border-right: none;
+    nav ul li {
+        display: block; /* make nav vertical on phones */
+        width: 100%;
+        margin-bottom: 0.5em;
+    }
 }
