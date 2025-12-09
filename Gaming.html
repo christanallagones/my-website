@@ -5,15 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/Gaming.css">
-    <meta name="description" content="My Gaming Career">
+    <link rel="stylesheet" href="CSS/Structure.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta name="description" content="My athletics">
     <title>Gaming</title><!--title of webpage, shows in browser tab-->
   </head>
   <nav id="nav_menu">
         <ul>
-            <li><a href="my-website/index.html">Home</a></li>
-            <li><a href="Sports.html">Sports</a></li>
-            <li><a href="Gaming.html">Gaming</a></li>
-            <li><a href="Favorites.html">Favorites</a></li>
+            <li><a href="./index.html"><i class="fa-regular fa-house"></i>Home</a></li>
+            <li><a href="Sports.html"><i class="fa-solid fa-heart-pulse"></i>Sports</a></li>
+            <li><a href="Gaming.html"><i class="fa-solid fa-gamepad"></i>Gaming</a></li>
+            <li><a href="Favorites.html"><i class="fa-solid fa-bookmark"></i>Favorites</a>
+              <ul>
+                <li id="dontshow"><a href="Favorites.html">Favorites</a></li>
+                <li><a href="Gallery.html"> Gallery</a></li>
+              </ul>
+            </li>
         </ul>
       </nav>
     <header>
@@ -21,10 +30,70 @@
     </header>
   <body>
     <main>
-      <p>
-        
+      <p class="paragraph">
+        Gaming has been a huge part of my life for as long as I can remember. 
+        Ive played on a wide variety of consoles over the years, from handheld 
+        systems like the PSP, Gameboy, Nintendo DS and DSi, to home consoles like 
+        the Wii, Xbox, Xbox 360, Xbox One, PS5, PC, and there might be some that I am forgetting.
+        Each system has given me unique experiences and unforgettable memories.
       </p>
-    
+    <h2>Favorite Game Genres</h2>
+      <section>
+      <p class="paragraph">While I enjoy many types of games, I usually gravitate toward first-person shooters
+       and sports games. Some of my favorites include:</p>
+       <section class="gallery"> <!--Section of a imgs of games-->
+            <div>
+                <img src="Pictures/2K.jpg"
+                    alt="Picture of 2K">
+            </div>
+            <div>
+                <img src="Pictures/Madden.jpg" 
+                    alt="Picture of Madden">
+            </div>
+            <div>
+                <img src="Pictures/COD.jpg"
+                    alt="Picture of COD">
+            </div>
+            <div>
+                <img src="Pictures/Fortnite.jpg" 
+                    alt="Picture of Fortnite">
+            </div>
+            <div>
+                <img src="Pictures/Apex.jpg" 
+                    alt="Picture of Apex">
+            </div>
+      </section>
+      <ul>
+        <li>NBA 2K series</li>
+        <li>Madden NFL series</li>
+        <li>Call of Duty (COD) series</li>
+        <li>Fortnite</li>
+        <li>Apex Legends</li>
+      </ul>
+      </section>
+    <h3>Monster Hunter Obsession</h3>
+    <section class="gallery"> <!--Section of a imgs of games-->
+            <div>
+                <img src="Pictures/Worlds.jpg"
+                    alt="Picture of MH World">
+            </div>
+            <div>
+                <img src="Pictures/Wilds.jpg" 
+                    alt="Picture of MH Wilds">
+            </div>
+      </section>
+    <p class="paragraph">During quarantine, I had a massive obsession with Monster Hunter: World, spending
+    hours tracking monsters, crafting gear, and exploring new environments. I now play Monster Hunter: Wilds
+    on and off today. The thrill of hunting monsters and strategizing with friends keeps me coming back for more.</p>
+    <h4>Other Gaming Interests</h4>
+      <section>
+      <p class="paragraph">Besides shooters and sports games, I sometimes explore:</p>
+        <ul>
+          <li>Adventure and role-playing games (RPGs)</li>
+          <li>Strategy and simulation games</li>
+          <li>Multiplayer co-op games with friends</li>
+        </ul>
+      </section>
     </main>
     <footer>&copy; Copyright Christan Allagones 2025</footer>
   </body>
