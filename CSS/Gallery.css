@@ -1,0 +1,53 @@
+body {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif, monospace;   /* font property #1 */
+    font-size: 1.6em;                /* font property #2 */
+    background-color: rgb(32, 162, 223);
+}
+ul li {
+    margin-bottom: 0.8em;
+    background-color: #ffffff;
+    border: 0.3em solid #000000;
+}
+h1, h2, h3, h4, h5 {
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.gallery { /*Makes the gallery of images display in a flex box*/
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap; /*Makes the flexboxes wrap (move down in rows) as the page size decreases*/
+    row-gap: 3em;
+    column-gap: 1.5em;
+    padding: 1em;
+    justify-content: center; /*Centers the content onto the page*/
+    
+}
+img { /*Set img width*/
+    width: auto;
+    max-width: 325px;
+    height: auto;
+    max-height: 350px;
+    border: 1px solid #000000;
+    
+}
+
+img:hover { /*Hover effect that makes the images slightly bigger when hovered over and applies a box shadow*/
+    transform: scale(2.0);
+    z-index: 1;
+}
+@media (max-width: 768px) {
+    .gallery {
+        row-gap: 2em;
+        column-gap: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        flex-direction: column; /* stack images vertically on phones */
+        row-gap: 1.5em;
+        column-gap: 0;
+    }
+}
