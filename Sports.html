@@ -5,15 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/Sports.css">
+    <link rel="stylesheet" href="CSS/Structure.css">
     <meta name="description" content="My athletics">
     <title>Sports</title><!--title of webpage, shows in browser tab-->
   </head>
-  <nav id="nav_menu">
+    <nav id="nav_menu">
         <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="Sports.html">Sports</a></li>
-            <li><a href="Gaming.html">Gaming</a></li>
-            <li><a href="Favorites.html">Favorites</a></li>
+            <li><a href="./index.html"><i class="fa-regular fa-house"></i>Home</a></li>
+            <li><a href="Sports.html"><i class="fa-solid fa-heart-pulse"></i>Sports</a></li>
+            <li><a href="Gaming.html"><i class="fa-solid fa-gamepad"></i>Gaming</a></li>
+            <li><a href="Favorites.html"><i class="fa-solid fa-bookmark"></i>Favorites</a>
+              <ul>
+                <li id="dontshow"><a href="Favorites.html">Favorites</a></li>
+                <li><a href="Gallery.html"> Gallery</a></li>
+              </ul>
+            </li>
         </ul>
       </nav>
     <header>
@@ -22,13 +28,46 @@
   <body>
     <main>
       <div class="column left">
-        <p>The is my life in Football</p>
+        <h2>The is my life in Volleyball</h2>
+        <div class="videobox">
+        <video controls loop class="video">
+            <source src="../Videos/Anothaone.mp4" type="video/mp4">
+        </video>
+        </div>
+        <div class="videobox">
+        <video controls loop class="video">
+            <source src="../Videos/Smallclip.mp4" type="video/mp4">
+        </video>
+        <p> My love for volleyball started with the anime Haikyuu!!, which sparked my interest 
+          in the sport and from there it grew. I was a part of a little tournament in high school
+          for fun with my girlfriend which led me to start going to some open gyms.
+          My girlfriend was already playing seriously, so I wanted to get better and spend more time with her.
+          Volleyball quickly became the sport I spent the most time on, whether at school, at local gyms, or practicing with friends. 
+          My brother and I even started a YouTube channel where we document the open gyms 
+          we attend, sharing tips, highlights, and our favorite moments. </p>
+        </div>
       </div>
       <div class="column middle">
-        <p>The is my life in Volleyball</p>
+        <h3>The is my life in Football</h3>
+        <img id="football" src="Pictures/Football.gif">
+        <p>I always wanted to play more football, but the only organized experience I had was in middle school.
+           Even though I didn’t continue playing competitively, I still love tossing the ball around with friends
+            and watching games. Growing up in Washington, I became a dedicated Seahawks fan and thankfully was able
+            to watch them win the Super Bowl in 2014, I still watch the NFL, but now with Fantasy Football, I enjoy
+            watching the players I have more now. </p>
       </div>
       <div class="column right">
-        <p> The is my life in Basketball</p>
+        <h4> The is my life in Basketball</h4>
+        <img id="basketball" src="Pictures/Basketball.gif">
+        <p>
+          I grew up playing basketball and have been around the sport my entire life. Most
+           of my experiences were casual, just shooting hoops with friends or playing at 
+           school, though I did play for a middle school club team once. Even now that I’m
+            out of school, I still enjoy playing occasionally just for fun. My favorite player
+             is LeBron James, so I naturally follow whatever team he’s on, cheering for 
+             him no matter where he plays. Basketball has always been a big part of my life
+             , and it’s a sport I enjoy both playing and watching.
+        </p>
       </div>
     </main>
     <footer>&copy; Copyright Christan Allagones 2025</footer>
