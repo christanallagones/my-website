@@ -5,23 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/MainPage.css">
+    <link rel="stylesheet" href="CSS/Structure.css">
     <meta name="description" content="The hobbies and interests in my life">
     <title>Welcome to my world</title><!--title of webpage, shows in browser tab-->
   </head>
-      <nav id="nav_menu">
-        <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="Sports.html">Sports</a></li>
-            <li><a href="Gaming.html">Gaming</a></li>
-            <li><a href="Favorites.html">Favorites</a></li>
+    <nav id="nav_menu"><!-- Navigation: contains links to other pages on the site -->
+      <ul>
+            <li><a href="./index.html"><i class="fa-regular fa-house"></i>Home</a></li>
+            <li><a href="Sports.html"><i class="fa-solid fa-heart-pulse"></i>Sports</a></li>
+            <li><a href="Gaming.html"><i class="fa-solid fa-gamepad"></i>Gaming</a></li>
+            <li><a href="Favorites.html"><i class="fa-solid fa-bookmark"></i>Favorites</a>
+              <ul>
+                <li id="dontshow"><a href="Favorites.html">Favorites</a></li>
+                <li><a href="Gallery.html"> Gallery</a></li>
+              </ul>
+            </li>
         </ul>
-      </nav>
+    </nav>
     <header>
       <h1>A little about me</h1>
     </header>
   <body>
     <main>
-     <img id="pfp" src="Pictures/PFP.png"><!--Picture of me-->
+     <img class="meandpets" src="Pictures/PFP.png"><!--Picture of me-->
      <p id="introduction" class="paragraph"><!--Introduction of myself-->
                 Hey everyone, my name is Christan Allagones and this webpage is about getting to 
                 know me and my interests. I am 20 years old, I graduated from Central Kitsap High 
@@ -29,7 +35,8 @@
                 getting a second associates in cybersecurity. I already have a general associates from OC.
                 I was born in Bremerton and have lived in the Kitsap area my entire life.
     </p>
-      <h2>My hobbies and interests include:</h2>
+      <h2>My hobbies and interests include:</h2><!-- Sub-heading for the list of hobbies -->
+      <section>
       <ul><!--Unorder list for hobbies and interests-->
         <li>Basketball</li>
         <li>Football</li>
@@ -37,8 +44,19 @@
         <li>Gaming</li>
         <li>My addiction right now: Fantasy Football</li>
       </ul>
-      <p>
-        I guess there are other things that I could add like consuming media or listening to music, but that basically sums it up. 
+      </section>
+      <h3> My Pets </h3>
+      <ul>
+        <img class="meandpets" src="Pictures/IMG_0112.jpg"><!--Picture of me-->
+        <img class="meandpets" src="Pictures/IMG_0603.JPEG"><!--Picture of me-->
+        <img class="meandpets" src="Pictures/IMG_2060.jpg"><!--Picture of me-->
+      </ul>
+      <p class="paragraph"><!--Introduction of my pets-->
+          I've had pets for almost my entire life, from before I was born to 2018 with, Cutie, the dog on the right,
+          and the past few years with, Tobi, the dog on the left, and most recently, Milo, the cat in the middle. 
+          Cutie was a female Shih Tzu Poodle mix, Tobi a male teddy bear breed(Shih Tzu Bichon Frise), and Milo a
+          male orange tabby. I always wanted to have a companion through life, so I am grateful to have three already. 
+          I didn't always like cats, but since getting Milo, he has grown on me, making me like them. 
       </p>
     </main>
     <footer>&copy; Copyright Christan Allagones 2025</footer>
