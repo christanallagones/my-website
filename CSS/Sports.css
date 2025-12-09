@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    font-family: Copperplate, fantasy;   /* font property #1 */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif, monospace;;   /* font property #1 */
     font-size: 1.6em;                /* font property #2 */
     background-color: #ffa600;        /* color */
 }
@@ -9,11 +9,12 @@ ul li {
     background-color: #ffffff;
     border: 0.3em solid #000000;
 }
+
 .column {
     float: left;
     width: 32%;
     border: 0.5em solid rgb(124, 124, 124);  /* chaotic border */
-    height: 15em;            /* fixed height for chaos */
+    height: 40em;            /* fixed height for chaos */
     overflow: auto;
 }
 .column.left {
@@ -35,37 +36,63 @@ h1 { /* Margin and Padding */
     border: 0.3em solid #000000;
     font-size: 3em;
 }
+.column.left h2 {
+    font-style: bold;
+}
+.column.middle h3 {
+    font-style: bold;
+}
+.column.right h4 {
+    font-style: bold;
+}
+.videobox {
+    grid-area: auto;
+    margin-right: 1.25%;
+    place-content: center;
+}
 
-#nav_menu {
-    margin: auto;
+.video {
     width: 100%;
+    height: auto;
+    border-radius: 1em;
+    border: 0.25em ridge black;
+}
+#basketball {
+    float: none;
+    margin-bottom: 2em;
+    width: 100%;
+    max-width: 431px;
+    border: 0.3em solid #000000;
+}
+#football{
+    float: none;
+    margin-bottom: 2em;
+    width: 100%;
+    max-width: 431px;
+    border: 0.3em solid #000000;
+}
+/* For tablets (768px and below) */
+@media (max-width: 768px) {
+    .column {
+        width: 48%;   /* two columns side by side */
+        float: none;
+        margin: 1%;
+    }
 }
 
-#nav_menu ul {
-    display: flex;
-    flex-basis: 100%;
-    justify-content: space-around; 
-    list-style-type: none;
-    position: relative;
+/* For phones (480px and below) */
+@media (max-width: 480px) {
+    .column {
+        width: 100%;  /* stack columns vertically */
+        margin: 0 0 1em 0;
+    }
+    
+    h1 {
+        font-size: 2em;  /* smaller headings for phones */
+    }
+    
+    body {
+        font-size: 1.2em; /* slightly smaller text */
+    }
 }
 
-
-#nav_menu ul li {
-    flex-basis: 33.33%;          
-}
-
-
-#nav_menu ul li a {
-    display: block;
-    padding: 1em 0;
-    text-decoration: none;
-    font-weight: bold;
-    text-align: center;
-    color: #000000;
-    border-right: 2px solid var(--border_color);
-}
-
-
-#nav_menu ul li:last-child a {
-    border-right: none;
-}
